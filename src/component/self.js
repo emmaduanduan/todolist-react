@@ -7,7 +7,9 @@ export default function Self() {
     });
   };
   const minus = () => {
-    setMyInput(+myInput - 1);
+    setMyInput((prev) => {
+      return +prev + 1;
+    });
   };
   return (
     <div>

@@ -1,10 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Weather from "./component/weather";
 import Self from "./component/self";
 import Todohead from "./component/Todohead";
 import Todobody from "./component/Todobody";
 import Greetings from "./component/Greetings";
-
+import Formula from "./component/Formula";
+import Change from "./component/Change";
 function App() {
   const [todoArray, setTodoArray] = useState(["吃饭", "睡觉"]);
 
@@ -20,7 +21,7 @@ function App() {
         })
       );
   };
-  let a = "hellp";
+  let a = "hello";
   return (
     <div className="App">
       <h1>hello</h1>
@@ -30,6 +31,8 @@ function App() {
       <Todobody addArr={todoArray} delFunc={delItem} a={a} />
       <br></br>
       <Greetings />
+      <Formula />
+      <Change />
     </div>
   );
 }
